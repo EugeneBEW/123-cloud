@@ -1,0 +1,15 @@
+<pool type='logical'>
+  <name>SSD_POOL1</name>
+  <uuid>64aa6974-78e8-47a7-926d-c811fa92adfd</uuid>
+  <capacity unit='bytes'>4398042316800</capacity>
+  <allocation unit='bytes'>0</allocation>
+  <available unit='bytes'>4398042316800</available>
+  <source>
+    <name>SSD_POOL1</name>
+    <format type='lvm2'/>
+  </source>
+  <target>
+    <path>/dev/SSD_POOL1</path>
+  </target>
+</pool>
+

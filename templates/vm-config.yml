@@ -1,0 +1,22 @@
+---
+id: $vm_id
+name: $vm_name
+target: $vm_target
+state: PROTO
+status: Stopped
+vcpus: $vm_cpu
+memory: $vm_ram
+cidata: vm-${vm_id}-cidata.iso
+os-variant: alse17
+virt-type: kvm
+volumes:
+- id: boot
+  type: ssd
+  size: ${vm_boot}G
+networks:
+- id: eth0
+  cidr: $vm_ip
+  network: ovs-network
+  portgroup: $vm_vlan
+  mac: $vm_mac
+  model: virtio

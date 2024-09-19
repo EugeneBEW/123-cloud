@@ -1,0 +1,15 @@
+<pool type='logical'>
+  <name>HDD_POOL1</name>
+  <uuid>de43e51c-97cc-4ec6-884e-35a38964c29a</uuid>
+  <capacity unit='bytes'>4398042316800</capacity>
+  <allocation unit='bytes'>0</allocation>
+  <available unit='bytes'>4398042316800</available>
+  <source>
+    <name>HDD_POOL1</name>
+    <format type='lvm2'/>
+  </source>
+  <target>
+    <path>/dev/HDD_POOL1</path>
+  </target>
+</pool>
+

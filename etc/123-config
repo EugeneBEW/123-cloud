@@ -1,0 +1,82 @@
+---
+
+defaults:
+  rootdir: /var/123-cloud
+  images: _ROOTDIR_/images
+  cidata: _ROOTDIR_/cidata
+  auth: _ROOTDIR_/auth
+  templates: _ROOTDIR_/templates
+  vm_configs: _ROOTDIR_/vm-configs
+  scripts: _ROOTDIR_/scripts
+  tmp: _ROOTDIR_/tmp
+  defaultimage: linux.raw
+  become_user: ****
+  rsync_user:  123-cloud
+  rsync_scr: /etc/rsync.scr
+  rsync_module: cloud
+  ssd_prefix: SSD_POOL
+  hdd_prefix: HDD_POOL
+  sshoptions: "-o StrictHostKeyChecking=no -o LogLevel=ERROR -o UserKnownHostsFile=/dev/null"
+
+  serverprefix: srv-backplane
+
+  domain: my.local
+  search: "my.local ours.local"
+  user:  user
+  password: $6$*******crypted*******************************
+  ssh_authorized_keys:
+    - ssh-rsa  ****************************************
+  nameservers: 
+    - 8.8.8.8 
+    - 1.1.1.1
+
+hypervisors:
+  srv-backplane1: xx.xx.xx.11
+  srv-backplane2: xx.xx.xx.12
+  srv-backplane3: xx.xx.xx.13
+  srv-backplane4: xx.xx.xx.14
+  srv-backplane5: xx.xx.xx.15
+  srv-backplane6: xx.xx.xx.16
+  srv-backplane7: xx.xx.xx.17
+  srv-backplane8: xx.xx.xx.18
+  srv-backplane9: xx.xx.xx.19
+  srv-backplane10: xx.xx.xx.20
+
+networks:
+- 
+  vlan: 10
+  portgroup: vlan-10
+  network:  yy.yy.yy.0
+  mask: 255.255.255.0
+  bits: 24
+  gateway: yy.yy.yy.1 
+  reservations:
+    - yy.yy.yy.1
+    - yy.yy.yy.2
+    - yy.yy.yy.3
+    - yy.yy.yy.4
+    - yy.yy.yy.5
+    - yy.yy.yy.6
+    - yy.yy.yy.7
+    - yy.yy.yy.8
+    - yy.yy.yy.9
+- 
+  vlan: 11
+  default: yes
+  portgroup: vlan-11
+  network:  zz.zz.zz.0
+  mask: 255.255.255.0
+  bits: 24
+  gateway: zz.zz.zz.1 
+  reservations:
+    - zz.zz.zz.1
+    - zz.zz.zz.2
+    - zz.zz.zz.3
+    - zz.zz.zz.4
+    - zz.zz.zz.5
+    - zz.zz.zz.6
+    - zz.zz.zz.7
+    - zz.zz.zz.8
+    - zz.zz.zz.9
+    - zz.zz.zz.10
+

@@ -1,0 +1,35 @@
+<network>
+<name>ovs-network</name>
+  <uuid>c56702ac-f277-4509-85b1-d3503dd9ac39</uuid>
+  <forward mode='bridge'/>
+  <bridge name='backplane1'/>
+  <virtualport type='openvswitch'/>
+  <portgroup name='vlan-10'>
+    <vlan>
+      <tag id='10'/>
+    </vlan>
+  </portgroup>
+  <portgroup name='vlan-11'>
+    <vlan>
+      <tag id='11'/>
+    </vlan>
+  </portgroup>
+  <portgroup name='vlan-50'>
+    <vlan>
+      <tag id='50'/>
+    </vlan>
+  </portgroup>
+  <portgroup name='vlan-80'>
+    <vlan>
+      <tag id='80'/>
+    </vlan>
+  </portgroup>
+<!--
+  <portgroup name='trunkPortGroup'>
+    <vlan trunk='yes'>
+      <tag id='30'/>
+      <tag id='1030'/>
+    </vlan>
+  </portgroup>
+-->
+</network>

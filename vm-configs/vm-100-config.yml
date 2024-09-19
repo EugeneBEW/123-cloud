@@ -1,0 +1,22 @@
+---
+id: 100
+name: clickhouse-restore
+target: 1
+state: PROTO
+status: Stopped
+vcpus: 32
+memory: 49152
+cidata: vm-100-cidata.iso
+os-variant: alse17
+virt-type: kvm
+volumes:
+- id: boot
+  type: ssd
+  size: 100G
+networks:
+- id: eth0
+  cidr: xx.xx.xx.xx/24
+  network: ovs-network
+  portgroup: vlan-10
+  mac: 22:2f:e5:30:a5:0d
+  model: virtio
